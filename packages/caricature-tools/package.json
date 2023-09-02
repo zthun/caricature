@@ -1,0 +1,36 @@
+{
+  "name": "@zthun/caricature-tools",
+  "version": "1.0.0",
+  "description": "Drawing tools and printable implementations to makeup a canvas.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/caricature",
+    "directory": "packages/caricature-tools"
+  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build": "microbundle --format esm,cjs --tsconfig tsconfig.prod.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@zthun/caricature-canvas": "^1.0.0",
+    "lodash": "^4.17.21",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3",
+    "vitest-mock-extended": "^1.2.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false
+}
