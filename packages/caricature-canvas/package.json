@@ -1,0 +1,35 @@
+{
+  "name": "@zthun/caricature-canvas",
+  "version": "1.0.0",
+  "description": "A canvas abstract layer that supports both node and dom.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/caricature",
+    "directory": "packages/caricature-canvas"
+  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build": "microbundle --format esm,cjs --tsconfig tsconfig.prod.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3",
+    "vitest-mock-extended": "^1.2.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false
+}
