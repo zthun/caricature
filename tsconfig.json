@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "packages",
+    "target": "esnext",
+    "paths": {
+      "@zthun/caricature-canvas": ["caricature-canvas/src/index"],
+      "@zthun/caricature-tools": ["caricature-tools/src/index"]
+    }
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["**/node_modules/**"]
+}
