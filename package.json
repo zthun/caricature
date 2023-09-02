@@ -1,0 +1,40 @@
+{
+  "name": "@zthun/caricature",
+  "description": "Draw some pictures and generate some art in a web browser canvas.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/caricature"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "rimraf --glob 'dist' 'reports' 'coverage' '*.tgz' '*.log' 'packages/**/dist' 'packages/**/docs' 'packages/**/*.tgz' 'packages/**/*.log'",
+    "test": "vitest --run --coverage",
+    "lint": "lint-janitor",
+    "build": "lerna run build",
+    "make": "yarn clean && yarn lint && yarn test && yarn build",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/lodash": "^4.14.197",
+    "@types/node": "^20.5.8",
+    "@vitest/coverage-istanbul": "^0.34.3",
+    "@zthun/lint-janitor": "^14.3.2",
+    "@zthun/lint-janitor-config": "^14.3.2",
+    "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
+    "lerna": "^7.2.0",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.34.3"
+  },
+  "packageManager": "yarn@3.3.1"
+}
