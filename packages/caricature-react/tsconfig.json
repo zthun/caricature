@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declarationDir": "dist/types",
+    "paths": {
+      "@zthun/caricature-canvas": ["../caricature-canvas/src/index"],
+      "@zthun/caricature-tools": ["../caricature-tools/src/index"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}
