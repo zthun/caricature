@@ -1,3 +1,4 @@
+import { IZCanvas } from '@zthun/caricature-canvas';
 import { fromEvent, Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { IZPrintable } from '../printable/printable';
@@ -29,12 +30,7 @@ export class ZToolingPan implements IZTooling {
    * @param transform -
    *        The transform to update.
    */
-  public init(
-    target: HTMLElement,
-    context: CanvasRenderingContext2D,
-    drawing: IZPrintable,
-    transform: IZTransformTranslate
-  ) {
+  public init(target: HTMLElement, context: IZCanvas, drawing: IZPrintable, transform: IZTransformTranslate) {
     this.destroy();
 
     this._destroy = new Subject();

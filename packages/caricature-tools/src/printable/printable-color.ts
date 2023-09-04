@@ -1,3 +1,4 @@
+import { IZCanvas } from '@zthun/caricature-canvas';
 import { IZPrintable } from './printable';
 
 /**
@@ -18,8 +19,7 @@ export class ZPrintableColor implements IZPrintable {
    * @param context -
    *        The drawing context.
    */
-  public print(context: CanvasRenderingContext2D) {
-    context.fillStyle = this.color;
-    context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+  public print(context: IZCanvas) {
+    context.fill(this.color, 0, 0, context.width, context.height);
   }
 }

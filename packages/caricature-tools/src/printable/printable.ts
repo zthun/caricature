@@ -1,3 +1,5 @@
+import { IZCanvas } from '@zthun/caricature-canvas';
+
 /**
  * Represents an object that can be used to print data to a 2d canvas context.
  */
@@ -8,5 +10,5 @@ export interface IZPrintable {
    * @param context -
    *        The context to print to.
    */
-  print(context: CanvasRenderingContext2D): void;
+  print(context: IZCanvas): void;
 }

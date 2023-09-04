@@ -1,3 +1,4 @@
+import { IZCanvas } from '@zthun/caricature-canvas';
 import { IZPrintable } from './printable';
 
 /**
@@ -18,7 +19,7 @@ export class ZPrintableGroup implements IZPrintable {
    * @param context -
    *        The canvas context to print to.
    */
-  public print(context: CanvasRenderingContext2D) {
+  public print(context: IZCanvas) {
     for (let i = 0; i < this.layers.length; ++i) {
       const layer = this.layers[i];
       layer.print(context);

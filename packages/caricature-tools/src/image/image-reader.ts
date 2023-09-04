@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { get2d } from '@zthun/caricature-canvas';
+import { IZCanvas, IZCanvasFactory } from '@zthun/caricature-canvas';
 
 /*
  * The methods in this module are untestable in the jest framework.
@@ -24,13 +24,15 @@ export interface IZImageReader {
    *        A promise that returns the loaded canvas.  If the read fails,
    *        then a canvas that is a 1x1 white pixel will be returned.
    */
-  read(data: string | Blob): Promise<HTMLCanvasElement>;
+  read(data: string | Blob | null): Promise<IZCanvas>;
 }
 
 /**
  * Represents the standard implementation of the image reader object.
  */
 export class ZImageReader implements IZImageReader {
+  public constructor(private _factory: IZCanvasFactory) {}
+
   /**
    * Reads the data blob.
    *
@@ -41,22 +43,23 @@ export class ZImageReader implements IZImageReader {
    *        A promise that returns the loaded canvas.  If the read fails,
    *        then a canvas that is a 1x1 white pixel will be returned.
    */
-  public read(data: string | Blob): Promise<HTMLCanvasElement> {
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
-    const bmp = get2d(canvas);
+  public read(data: string | Blob | null): Promise<IZCanvas> {
+    const canvas = this._factory.create(1, 1);
 
-    return new Promise<HTMLCanvasElement>((resolve) => {
+    return new Promise<IZCanvas>((resolve) => {
+      if (data == null) {
+        resolve(canvas);
+        return;
+      }
+
       const url = typeof data === 'string' ? data : URL.createObjectURL(data);
       const img = new Image();
 
       img.crossOrigin = 'Anonymous';
 
       img.onload = () => {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        bmp.drawImage(img, 0, 0);
+        canvas.resize(img.width, img.height);
+        canvas.transfer(img, 0, 0);
         URL.revokeObjectURL(url);
         resolve(canvas);
       };

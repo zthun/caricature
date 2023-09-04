@@ -1,3 +1,4 @@
+import { IZCanvas } from '@zthun/caricature-canvas';
 import { IZTransformScale } from '../transform/transform-scale';
 import { IZTransformSkew } from '../transform/transform-skew';
 import { IZTransformTranslate } from '../transform/transform-translate';
@@ -106,24 +107,7 @@ export class ZPrintableTransform implements IZPrintable, IZTransformScale, IZTra
    * @param context -
    *        The context to apply the transformation on.
    */
-  public print(context: CanvasRenderingContext2D) {
-    // See https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/transform for transformation information.
-
-    /*
-     * The transformation matrix is described by:
-     * [ a c e ]
-     * [ b d f ]
-     * [ 0 0 1 ]
-     *
-     * Where the following is true.
-     *
-     * a = scale (x)
-     * b = skew (y)
-     * c = skew (x)
-     * d = scale (y)
-     * e = translate (x)
-     * f = translate (y)
-     */
-    context.transform(this.scaleX, this.skewY, this.skewX, this.scaleY, this.translateX, this.translateY);
+  public print(context: IZCanvas) {
+    context.transform(this.scaleX, this.scaleY, this.skewX, this.skewY, this.translateX, this.translateY);
   }
 }
