@@ -1,7 +1,6 @@
 export * from './image/image-reader';
 export * from './printable/printable';
 export * from './printable/printable-color';
-export * from './printable/printable-drawing';
 export * from './printable/printable-group';
 export * from './printable/printable-image';
 export * from './printable/printable-nothing';
