@@ -4,6 +4,7 @@ reports
 *.lerna_backup
 *.tgz
 .rpt2_cache
+stats
 
 # Secrets
 .secrets
