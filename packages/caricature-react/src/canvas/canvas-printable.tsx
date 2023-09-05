@@ -1,3 +1,4 @@
+import { ZCanvas } from '@zthun/caricature-canvas';
 import { IZPrintable } from '@zthun/caricature-tools';
 import { createStyleHook } from '@zthun/fashion-boutique';
 import { cssJoinDefined } from '@zthun/helpful-fn';
@@ -20,15 +21,11 @@ const useCanvasStyles = createStyleHook(() => ({
 export function ZCanvasPrintable(props: IZCanvas) {
   const { draw } = props;
   const { classes } = useCanvasStyles();
-  const _canvas = useRef<HTMLCanvasElement | null>(null);
+  const _dom = useRef<HTMLCanvasElement>(document.createElement('canvas'));
 
   useEffect(() => {
-    const context = _canvas.current?.getContext('2d');
+    draw.print(new ZCanvas(_dom.current));
+  }, [draw, _dom.current]);
 
-    if (context) {
-      draw.print(context);
-    }
-  }, [draw, _canvas.current]);
-
-  return <canvas className={cssJoinDefined('ZCaricatureCanvas-root', classes.canvas)} ref={_canvas} />;
+  return <canvas className={cssJoinDefined('ZCanvasPrintable-root', classes.canvas)} ref={_dom} />;
 }
