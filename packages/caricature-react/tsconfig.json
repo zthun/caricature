@@ -8,5 +8,5 @@
       "@zthun/caricature-tools": ["../caricature-tools/src/index"]
     }
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
