@@ -3914,7 +3914,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/caricature-canvas@^1.1.0, @zthun/caricature-canvas@workspace:packages/caricature-canvas":
+"@zthun/caricature-canvas@^1.1.1, @zthun/caricature-canvas@workspace:packages/caricature-canvas":
   version: 0.0.0-use.local
   resolution: "@zthun/caricature-canvas@workspace:packages/caricature-canvas"
   dependencies:
@@ -3928,12 +3928,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zthun/caricature-react@^1.1.0, @zthun/caricature-react@workspace:packages/caricature-react":
+"@zthun/caricature-react@^1.1.1, @zthun/caricature-react@workspace:packages/caricature-react":
   version: 0.0.0-use.local
   resolution: "@zthun/caricature-react@workspace:packages/caricature-react"
   dependencies:
-    "@zthun/caricature-canvas": ^1.1.0
-    "@zthun/caricature-tools": ^1.1.0
+    "@zthun/caricature-canvas": ^1.1.1
+    "@zthun/caricature-tools": ^1.1.1
     "@zthun/cirque": ^4.3.1
     "@zthun/cirque-du-react": ^4.3.1
     "@zthun/fashion-boutique": ^0.11.1
@@ -3952,11 +3952,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zthun/caricature-tools@^1.1.0, @zthun/caricature-tools@workspace:packages/caricature-tools":
+"@zthun/caricature-tools@^1.1.1, @zthun/caricature-tools@workspace:packages/caricature-tools":
   version: 0.0.0-use.local
   resolution: "@zthun/caricature-tools@workspace:packages/caricature-tools"
   dependencies:
-    "@zthun/caricature-canvas": ^1.1.0
+    "@zthun/caricature-canvas": ^1.1.1
     lodash: ^4.17.21
     microbundle: ^0.15.1
     rxjs: ^7.8.1
@@ -3970,9 +3970,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/caricature-web@workspace:packages/caricature-web"
   dependencies:
-    "@zthun/caricature-canvas": ^1.1.0
-    "@zthun/caricature-react": ^1.1.0
-    "@zthun/caricature-tools": ^1.1.0
+    "@zthun/caricature-canvas": ^1.1.1
+    "@zthun/caricature-react": ^1.1.1
+    "@zthun/caricature-tools": ^1.1.1
     "@zthun/cirque": ^4.3.1
     "@zthun/cirque-du-react": ^4.3.1
     "@zthun/fashion-boutique": ^0.11.0
