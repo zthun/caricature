@@ -1,6 +1,6 @@
 {
   "name": "@zthun/caricature-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A set of react components that can be used to build a drawable canvas.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -19,8 +19,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@zthun/caricature-canvas": "^1.0.0",
-    "@zthun/caricature-tools": "^1.0.0",
+    "@zthun/caricature-canvas": "^1.1.0",
+    "@zthun/caricature-tools": "^1.1.0",
     "@zthun/cirque": "^4.3.1",
     "@zthun/fashion-boutique": "^0.11.1",
     "@zthun/fashion-theme": "^0.11.0",
