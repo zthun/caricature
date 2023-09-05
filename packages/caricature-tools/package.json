@@ -1,6 +1,6 @@
 {
   "name": "@zthun/caricature-tools",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Drawing tools and printable implementations to makeup a canvas.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@zthun/caricature-canvas": "^1.1.0",
+    "@zthun/caricature-canvas": "^1.1.1",
     "lodash": "^4.17.21",
     "rxjs": "^7.8.1"
   },
