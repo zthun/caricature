@@ -1,1 +1,1 @@
-export * from './canvas/canvas-printable';
+export * from './canvas/canvas-printer';

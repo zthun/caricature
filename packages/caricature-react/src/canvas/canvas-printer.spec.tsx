@@ -4,16 +4,16 @@ import { ZCircusSetupRenderer } from '@zthun/cirque-du-react';
 import { white } from '@zthun/fashion-theme';
 import React from 'react';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { ZCanvasPrintable } from './canvas-printable';
-import { ZCanvasPrintableComponentModel } from './canvas-printable.cm';
+import { ZCanvasPrinter } from './canvas-printer';
+import { ZCanvasPrinterComponentModel } from './canvas-printer.cm';
 
-describe('ZCanvasPrintable', () => {
+describe('ZCanvasPrinter', () => {
   let draw: IZPrintable;
 
   const createTestTarget = async () => {
-    const element = <ZCanvasPrintable draw={draw} />;
+    const element = <ZCanvasPrinter draw={draw} />;
     const driver = await new ZCircusSetupRenderer(element).setup();
-    return ZCircusBy.first(driver, ZCanvasPrintableComponentModel);
+    return ZCircusBy.first(driver, ZCanvasPrinterComponentModel);
   };
 
   beforeEach(() => {
